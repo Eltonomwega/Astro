@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+    *The tool bar icons here ...
+    *Then this file is linked into the main activity
+    -->
+
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/ic_notifications"
+        android:iconTint="@android:color/white"
+        android:title="@string/notification"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/history"
+        android:icon="@drawable/ic_history"
+        android:iconTint="@android:color/white"
+        android:title="@string/history"
+        app:showAsAction="ifRoom" />
+
+
+</menu>
