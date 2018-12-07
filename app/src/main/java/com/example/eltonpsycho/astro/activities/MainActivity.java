@@ -12,10 +12,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.OvershootInterpolator;
 
 import com.example.eltonpsycho.astro.R;
-import com.example.eltonpsycho.astro.utils.ripples.RippleView;
+import com.example.eltonpsycho.astro.utils.ripples.RippleBackground;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -24,11 +26,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ActionBarDrawerToggle actionBarDrawerToggle;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    RippleView rippleView;
+    RippleBackground rippleView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Window w = getWindow();
+        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
         setContentView(R.layout.activity_main);
 
         //initializing the views by finding the ids
@@ -57,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
         rippleView = findViewById(R.id.rippleView);
-        rippleView.newRipple();
+        rippleView.startRippleAnimation();
 
     }
 

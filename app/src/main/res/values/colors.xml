@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="hamburger">#ffff</color>
     <color name="basecolor">#d3d3d3</color>
+    <color name="rippleColor">#b7f9f5f5</color>
 </resources>
