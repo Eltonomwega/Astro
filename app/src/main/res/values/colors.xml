@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#0083b0</color>
     <color name="colorAccent">#D81B60</color>
     <color name="hamburger">#ffff</color>
+    <color name="basecolor">#d3d3d3</color>
 </resources>
