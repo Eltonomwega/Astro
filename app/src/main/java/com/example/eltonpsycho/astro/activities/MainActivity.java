@@ -1,5 +1,6 @@
 package com.example.eltonpsycho.astro.activities;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -111,5 +112,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         return false;
+    }
+
+    public void settingsLaunch(MenuItem item) {
+
+        Intent intent = new Intent(this,SettingsActivity.class);
+        startActivity(intent);
     }
 }
