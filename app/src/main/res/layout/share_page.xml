@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sharepage2"
+    >
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/shareTtb"
+        android:background="@color/sharepage3"
+        android:paddingRight="10dp"
+        android:paddingEnd="10dp">
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_keyboard_backspace_black_24dp"
+    />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/discover"
+            android:textSize="18sp"
+            tools:layout_marginLeft="10dp" />
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shareTtb"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/Ttl"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ShareTitle"
+        android:textSize="24sp"
+        android:fontFamily="@font/nunito_bold"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/Ttl"
+        android:gravity="center"
+        android:id="@+id/line1"
+        >
+    <view
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/basecolor"
+        />
+    </LinearLayout>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="13dp"
+        android:id="@+id/ScrollUsers"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_gravity="center"
+            >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/avater"
+            />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ScrollUsers"
+        android:gravity="center"
+        android:id="@+id/DiscoveredMusic"
+        android:background="@color/sharepage1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="3dp"
+        >
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/discovered_music"
+          android:textSize="18sp"
+          android:textColor="@android:color/background_dark"
+          android:fontFamily="@font/nunito_bold"
+          tools:targetApi="jelly_bean" />
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/DiscoveredMusic"
+        android:scrollbars="none"
+        android:background="@color/sharepage1"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+
+        >
+
+
+    </ListView>
+
+</RelativeLayout>

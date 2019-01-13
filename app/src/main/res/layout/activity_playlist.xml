@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.PlaylistActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:id="@+id/playlistToolbar"
+       >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:srcCompat="@drawable/ic_keyboard_backspace_black_24dp"
+            android:onClick="launchHome"
+            />
+       <!--EditText
+           android:id="@+id/search_br"
+           android:layout_width="300dp"
+           android:layout_height="match_parent"
+           android:layout_marginLeft="25dp"
+           android:layout_marginStart="25dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginBottom="10dp"
+           android:background="@drawable/search_box"
+           android:drawableLeft="@drawable/ic_search_black_24dp"
+           android:drawablePadding="5dp"
+           android:hint="@string/searchHint"
+           android:paddingTop="3dp"
+           android:textColor="#000"
+           android:textSize="16sp"
+           android:drawableStart="@drawable/ic_search_black_24dp" /-->
+
+            <!--ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_margin="15dp"
+                android:background="@drawable/icons8_heart_outline_34"
+                /-->
+    </android.support.v7.widget.Toolbar>
+    <!--view
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/basecolor"
+        android:layout_alignBottom="@+id/playlistToolbar"
+        /-->
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+    <!--ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rick"
+        android:layout_centerInParent="true"
+        android:background="@drawable/icons8_rick_sanchez_100"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Nomusic"
+        android:textSize="16sp"
+        app:fontFamily="@font/nunito_bold"
+        android:layout_marginTop="10dp"
+        /-->
+    <!--ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Musicplaylist"
+        /-->
+
+
+   <android.support.v4.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+
+
+       <android.support.v7.widget.RecyclerView
+    android:id="@+id/playlistRecyler"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+</android.support.v7.widget.RecyclerView>
+   </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+</LinearLayout>
