@@ -16,18 +16,21 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.OvershootInterpolator;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.eltonpsycho.astro.R;
 import com.example.eltonpsycho.astro.utils.ripples.RippleBackground;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    Toolbar toolbar;
+    Toolbar toolbar,tbt;
     FloatingActionButton searchForUsersFab;
     ActionBarDrawerToggle actionBarDrawerToggle;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     RippleBackground rippleView;
+    ImageButton musicNote;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void init() {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+       // setSupportActionBar(tbt);
+
         //not using this title because its easier to use the textview for a title
         getSupportActionBar().setTitle("");
         toolbar.setTitleTextColor(Color.WHITE);
@@ -63,14 +68,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        rippleView = findViewById(R.id.rippleView);
-        rippleView.startRippleAnimation();
+        musicNote = (ImageButton) findViewById(R.id.musicNote);
+       //musicNote.setVisibility(View.INVISIBLE);
 
     }
 
     //Menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
@@ -117,6 +123,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void settingsLaunch(MenuItem item) {
 
         Intent intent = new Intent(this,SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    public void startRipple(View view) {
+
+        Toast.makeText(this, "Searching for nearby users", Toast.LENGTH_SHORT).show();
+        rippleView = findViewById(R.id.rippleView);
+        rippleView.startRippleAnimation();
+    }
+
+    public void playlistLaunch(MenuItem item) {
+
+        Intent intent = new Intent(this,PlaylistActivity.class);
         startActivity(intent);
     }
 }

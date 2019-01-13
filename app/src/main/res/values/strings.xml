@@ -78,4 +78,11 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+    <string name="searchHint">search</string>
+    <string name="Nomusic">uurp you...you got no music Morty!</string>
+    <string name="fav">favourite</string>
+    <string name="share">share</string>
+    <string name="ShareTitle">Available Users</string>
+    <string name="discovered_music">Discovered Music</string>
+    <string name="discover">Discover</string>
 </resources>

@@ -6,4 +6,7 @@
     <color name="hamburger">#ffff</color>
     <color name="basecolor">#d3d3d3</color>
     <color name="rippleColor">#b7f9f5f5</color>
+    <color name="sharepage1">#E3F2FD</color>
+    <color name="sharepage2">#BBDEFB</color>
+    <color name="sharepage3">#90CAF9</color>
 </resources>

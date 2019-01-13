@@ -56,7 +56,9 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_centerInParent="true"
-               android:background="@drawable/ic_music_note_black_24dp"
+               android:id="@+id/musicNote"
+               android:background="@drawable/launcher_music_note"
+               android:onClick="startRipple"
                />
 
             </com.example.eltonpsycho.astro.utils.ripples.RippleBackground>
@@ -75,8 +77,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_margin="16dp"
-            android:src="@drawable/ic_person_black_24dp"
+            android:layout_margin="25dp"
+            app:srcCompat="@drawable/ic_person_black_24dp"
             android:tint="#0083b0"
             app:backgroundTint="@android:color/white"
             app:elevation="6dp" />
@@ -95,6 +97,16 @@
         android:layout_marginTop="57dp"
         android:background="@color/basecolor" />
 
+    <android.support.design.widget.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        >
+
+
+
+    </android.support.design.widget.BottomNavigationView>
+
 </RelativeLayout>
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"
@@ -103,4 +115,6 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/navigation_drawer_header"
         app:menu="@menu/drawer_menu" />
+
+
 </android.support.v4.widget.DrawerLayout>
