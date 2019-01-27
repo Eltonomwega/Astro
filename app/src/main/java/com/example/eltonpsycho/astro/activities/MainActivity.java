@@ -24,7 +24,7 @@ import com.example.eltonpsycho.astro.utils.ripples.RippleBackground;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    Toolbar toolbar,tbt;
+    Toolbar toolbar, tbt;
     FloatingActionButton searchForUsersFab;
     ActionBarDrawerToggle actionBarDrawerToggle;
     DrawerLayout drawerLayout;
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void init() {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-       // setSupportActionBar(tbt);
+        // setSupportActionBar(tbt);
 
         //not using this title because its easier to use the textview for a title
         getSupportActionBar().setTitle("");
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
         musicNote = (ImageButton) findViewById(R.id.musicNote);
-       //musicNote.setVisibility(View.INVISIBLE);
+        //musicNote.setVisibility(View.INVISIBLE);
 
     }
 
@@ -117,12 +117,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        return false;
+        switch (item.getItemId()) {
+            case R.id.playlist:
+                Intent intent = new Intent(this, PlaylistActivity.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.action_my_profile:
+                return true;
+            case R.id.action_settings:
+                return true;
+
+            default:
+                return false;
+        }
+
     }
 
     public void settingsLaunch(MenuItem item) {
 
-        Intent intent = new Intent(this,SettingsActivity.class);
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 
@@ -135,7 +149,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public void playlistLaunch(MenuItem item) {
 
-        Intent intent = new Intent(this,PlaylistActivity.class);
-        startActivity(intent);
+
     }
 }
